@@ -1,0 +1,15 @@
+{
+  "name": "gestion-calendrier",
+  "version": "1.0.0",
+  "description": "Application de gestion du calendrier FFS",
+  "scripts": {
+    "dev": "concurrently \"bun run backend:dev\" \"bun run frontend:dev\"",
+    "backend:dev": "cd backend && bun run dev",
+    "frontend:dev": "cd frontend && bun run dev",
+    "install:all": "cd backend && bun install && cd ../frontend && bun install",
+    "build": "cd frontend && bun run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

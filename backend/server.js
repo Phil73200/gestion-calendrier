@@ -7,7 +7,7 @@ const PORT = 4000;
 app.use(cors());
 app.use(express.json());
 
-const db = new sqlite3.Database('./calendar.db');
+const db = new sqlite3.Database('../calendar.db');
 
 app.get('/api/candidatures', (req, res) => {
   db.all('SELECT * FROM candidatures', [], (err, rows) => {
